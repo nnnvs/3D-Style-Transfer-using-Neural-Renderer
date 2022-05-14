@@ -1,0 +1,46 @@
+#!/bin/bash
+
+#SBATCH --nodes=1
+#SBATCH --job-name=gpu-jupyter
+#SBATCH --output=./gpu_jupyter_%j.out
+#SBATCH --cpus-per-task=2
+#SBATCH --mem=32GB
+#SBATCH --time=2:00:00
+#SBATCH --gres=gpu:1
+
+port=$(shuf -i 10000-65500 -n 1)
+
+opts="-o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -o LogLevel=ERROR -N -f -R $port:localhost:$port"
+
+for((i=1; i<=3; i++)); do
+    /usr/bin/ssh $opts $USER@log-$i.nyu.cluster
+done
+
+cat<<EOF
+
+Jupyter server is running on: $(hostname)
+Job starts at: $(date)
+
+Step 1 :
+
+If you are working in NYU campus, please open an iTerm window, run command
+
+ssh -L $port:localhost:$port $USER@greene.hpc.nyu.edu
+
+EOF
+
+unset XDG_RUNTIME_DIR
+if [ "$SLURM_JOBTMP" != "" ]; then
+    export XDG_RUNTIME_DIR=$SLURM_JOBTMP
+fi
+
+if [ -e /dev/nvidia0 ]; then nv="--nv"; fi
+
+module purge
+module load anaconda3/2020.07
+eval "$(conda shell.bash hook)"
+
+conda activate /scratch/nv2095/new_env/new_env
+module load  cuda/10.2.89
+jupyter notebook --no-browser --port $port --notebook-dir=/scratch/nv2095/
+
