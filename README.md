@@ -7,12 +7,12 @@ Contributors: <br>
 Nikhil Vinay Sharma (nv2095@nyu.edu) <br>
 Vishv Shrava Sharma (vss7121@vss.edu) <br>
 
-# System requirements
+## System requirements
 Tested on NYU Greene Cluster</br>
 GPU </br>
 Cuda 10.2 (Should work on higher cuda versions as well) </br>
 
-# Setting up the environment
+## Setting up the environment
 1. Activate new environment in which you want to test our code.
 2. `pip install -r requirements.txt`
 3. `pip3 install torch==1.8.1+cu102 torchvision==0.9.1+cu102 torchaudio===0.8.1 -f https://download.pytorch.org/whl/torch_stable.html`
@@ -23,16 +23,16 @@ Cuda 10.2 (Should work on higher cuda versions as well) </br>
 
 The jupyter notebook file `Installation & first run.ipynb` takes you through the process of installing and running a few examples.
 
-# To run examples
+## To run examples
 After installation, run `bash ./style_transfer/src/scripts/run.sh`
 
-# Code Structure
+## Code Structure
 
-# Output
+## Output
 
 
 
-# FAQ
+## FAQ
 
 Common errors during installation:
 
