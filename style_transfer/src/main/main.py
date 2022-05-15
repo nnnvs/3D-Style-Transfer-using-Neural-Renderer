@@ -36,7 +36,7 @@ class StyleTransferModel(nn.Module):
             lambda_content=1e5,
             lambda_tv=1e2,
             image_size=256,
-    ):
+        ):
         super(StyleTransferModel, self).__init__()
         self.image_size = image_size
         self.camera_distance = camera_distance
@@ -50,7 +50,7 @@ class StyleTransferModel(nn.Module):
 
         # load reference image
         self.reference_image = imread(filename_style).astype('float32') / 255.
-        #self.reference_image = cv2.resize(self.reference_image,(image_size,image_size))
+        # self.reference_image = cv2.resize(self.reference_image,(image_size,image_size))
         self.reference_image = torch.from_numpy(self.reference_image).permute(2,0,1)[None, ::].to(device)
         self.cnn = models.vgg19(pretrained=True).features.to(device).eval()
         for param in self.cnn.parameters():

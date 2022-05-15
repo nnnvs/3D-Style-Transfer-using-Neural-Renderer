@@ -86,7 +86,7 @@ def run():
 
     # draw object
     # model.renderer.background_color = (1, 1, 1)
-    print("Saving the object after performing style tra")
+    print("Saving the object after performing style transfer")
     loop = tqdm.tqdm(range(0, 360, 4))
     output_images = []
     for num, azimuth in enumerate(loop):

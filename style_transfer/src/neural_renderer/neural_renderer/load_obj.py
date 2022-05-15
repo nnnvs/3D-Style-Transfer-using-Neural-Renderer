@@ -91,6 +91,7 @@ def load_textures(filename_obj, filename_mtl, texture_size, texture_wrapping='RE
         # texture image may have one channel (grey color)
         if len(image.shape) == 2:
             image = np.stack((image,)*3,-1)
+        
         # or has extral alpha channel shoule ignore for now
         if image.shape[2] == 4:
             image = image[:,:,:3]

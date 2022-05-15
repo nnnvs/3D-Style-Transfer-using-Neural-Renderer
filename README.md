@@ -52,13 +52,4 @@ The codebase has been divided into modules. All core code is present in the styl
    <img src="https://raw.githubusercontent.com/nnnvs/3D-Style-Transfer-using-Neural-Renderer/main/style_transfer/src/scripts/data/results/unnamed.gif" width="30%" height="30%">
 </div>
 
-<div>
-   <img src="https://raw.githubusercontent.com/hiroharu-kato/style_transfer_3d/master/examples/data/styles/munch1.jpg" width="30%" height="30%">
-   <img src="https://raw.githubusercontent.com/hiroharu-kato/style_transfer_3d/master/examples/data/results/bunny.gif" width="30%" height="30%">
-   <img src="https://raw.githubusercontent.com/hiroharu-kato/style_transfer_3d/master/examples/data/results/bunny_munch.gif" width="30%" height="30%">
-</div>
-
-## FAQ
-
-Common errors during installation:
 
