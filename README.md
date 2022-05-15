@@ -1,6 +1,6 @@
 # 3D Style Transfer using Neural Renderer
 
-This repository contains implementation of the Final Project of Intro to Deep Learning at NYU Courant. <br>
+This repository contains implementation of the Final Project of Introduction to Deep Learning Systems at NYU Courant. <br>
 Contributors: <br>
 Nikhil Vinay Sharma (nv2095@nyu.edu) <br>
 Vishv Shrava Sharma (vss7121@vss.edu) <br>
