@@ -1,4 +1,4 @@
-# 3D Style Transfer
+# 3D Style Transfer using Neural Renderer
 
 This repository contains implementation of the Final Project of Intro to Deep Learning at NYU Courant. <br>
 Contributors: <br>
