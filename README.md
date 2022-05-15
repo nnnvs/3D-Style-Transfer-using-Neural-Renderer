@@ -1,5 +1,7 @@
 # 3D Style Transfer using Neural Renderer
 
+3D Style Transfer using Neural Renderer is ...
+
 This repository contains implementation of the Final Project of Introduction to Deep Learning Systems at NYU Courant. <br>
 Contributors: <br>
 Nikhil Vinay Sharma (nv2095@nyu.edu) <br>
@@ -18,3 +20,19 @@ Cuda 10.2 (Should work on higher cuda versions as well) </br>
 5. `python setup.py install --user`
 6. `bash ./style_transfer/src/scripts/run.sh`
 7. Resulting `.gif` images will be available in the examples/data/results folder. Output gif file will be `bunny_gogh2.gif`. Please note that we also apply texture mapping to our inputs for further results and the output for that will be `stylized_and_textured_bunny_gogh2.gif`.
+
+The jupyter notebook file `Installation & first run.ipynb` takes you through the process of installing and running a few examples.
+
+# To run examples
+After installation, run `bash ./style_transfer/src/scripts/run.sh`
+
+# Code Structure
+
+# Output
+
+
+
+# FAQ
+
+Common errors during installation:
+
