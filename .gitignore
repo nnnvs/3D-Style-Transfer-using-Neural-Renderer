@@ -1,4 +1,4 @@
-.ipynipynb_checkpoints/
+.ipynb_checkpoints/
 *.out
 *.sbatch
 
